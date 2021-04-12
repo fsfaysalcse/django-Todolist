@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Create ToDo {% endblock %}}
+
+{% block content %} 
+
+    <h4>Here you can create new list</h4>
+
+    <form method="POST" action="/create">
+        {% csrf_token %}
+        {{form.as_ul}}
+        <button type="submit" name="save">Create New</button>
+    
+    </form>    
+
+
+
+{% endblock %}}
